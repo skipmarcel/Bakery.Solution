@@ -21,5 +21,20 @@ namespace Bakery.Tests
    //Assert should be the same becaue it's only one loaf
    Assert.AreEqual(pricePerLoaf, totalPrice);
   }
+
+  [TestMethod]
+  public void GetTotalPrice_ReturnsCorrectTotalPriceForTwoLoafOfBread()
+ {
+  //Arrange 
+  decimal pricePerLoaf = 5.0m;
+  int numLoaves = 2;
+  BreadDeal breadDeal = new BreadDeal(pricePerLoaf, numLoaves);
+
+  //Act
+  decimal totalPrice = breadDeal.GetTotalPrice();
+
+  //Assert should be equal because price is multiplied by 2
+  Assert.AreEqual(pricePerLoaf * 2, totalPrice);
  }
+}
 }
