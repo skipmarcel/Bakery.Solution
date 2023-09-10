@@ -51,5 +51,21 @@ namespace Bakery.Tests
   //Assert should be equale because at 7 loaves total price is $25
   Assert.AreEqual(pricePerLoaf * 5, totalPrice);
  }
+
+ [TestMethod]
+ public void GetTotalPastryPrice_ShouldReturnCorrectPrice_WhenNumPastriesIs4()
+ {
+  //Arrange 
+  decimal pricePerPastry = 2.0M;
+  int numPastries = 4;
+  decimal expectedPrice = 6.0M;
+  PastryDeal pastryDeal = new PastryDeal(pricePerPastry, numPastries);
+
+  //Act 
+  decimal actualPrice = pastryDeal.GetTotalPastryPrice();
+
+  //Assert
+  Assert.AreEqual(expectedPrice, actualPrice);
+ }
 }
 }
