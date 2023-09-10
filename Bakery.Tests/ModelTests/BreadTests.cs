@@ -85,7 +85,7 @@ namespace Bakery.Tests
  }
 
  [TestMethod]
- public void public void GetTotalPastryPrice_ShouldReturnCorrectPrice_WhenNumPastriesIs8()
+ public void GetTotalPastryPrice_ShouldReturnCorrectPrice_WhenNumPastriesIs8()
  {
   //Arrange
   decimal pricePerPastry = 2.0M;
