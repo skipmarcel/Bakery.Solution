@@ -67,5 +67,21 @@ namespace Bakery.Tests
   //Assert
   Assert.AreEqual(expectedPrice, actualPrice);
  }
+
+ [TestMethod]
+ public void GetTotalPastryPrice_ShouldReturnCorrectPrice_WhenNumPastriesIs7()
+ {
+  //Arrange
+  decimal pricePerPastry = 2.0M;
+  int numPastries = 7;
+  decimal expectedPrice = 12.0M;
+  PastryDeal pastryDeal = new PastryDeal(pricePerPastry, numPastries);
+
+  //Act
+  decimal actualPrice = pastryDeal.GetTotalPastryPrice();
+
+  //Assert
+  Assert.AreEqual(expectedPrice, actualPrice);
+ }
 }
 }
